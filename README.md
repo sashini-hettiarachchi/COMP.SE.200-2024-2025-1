@@ -14,4 +14,4 @@ Individuals who remove or modify the license file will also carry the consequenc
 
 # Coverage 
 
-[![Coverage Status](https://coveralls.io/repos/github/sashini-hettiarachchi/COMP.SE.200-2024-2025-1/badge.svg?branch=main)](https://coveralls.io/github/sashini-hettiarachchi/COMP.SE.200-2024-2025-1?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/sashini-hettiarachchi/COMP.SE.200-2024-2025-1/badge.svg?branch=main)](https://coveralls.io/github/sashini-hettiarachchi/COMP.SE.200-2024-2025-1?branch=main) 
