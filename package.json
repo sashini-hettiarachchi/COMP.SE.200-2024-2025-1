@@ -9,9 +9,7 @@
    "test-coverage": "nyc --all --reporter lcov mocha"
   },
   "nyc": {
-    "include": [
-      "src/**/*.js"
-    ],
+    "include": ["src/**/*.js", "test/**/*.js"],
     "reporter": [
       "lcov",
       "text"
