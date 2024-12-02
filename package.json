@@ -6,15 +6,18 @@
   "type": "module",
   "scripts": {
     "test": "mocha",
-   "test-coverage": "nyc --all --reporter lcov mocha"
+    "test-coverage": "nyc --all --reporter lcov mocha"
   },
   "nyc": {
-    "include": ["src/**/*.js", "test/**/*.js"],
+    "include": [
+      "src/**/*.js"
+    ],
     "reporter": [
       "lcov",
       "text"
     ],
-    "report-dir": "./coverage"
+    "report-dir": "./coverage",
+    "all": true
   },
   "author": "",
   "license": "MIT",
