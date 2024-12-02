@@ -13,8 +13,8 @@
       "src/**/*.js"
     ],
     "exclude": [
-      "test/**/*.js",
-      "src/.internal/**"
+      "src/.internal/**",
+      "test/**/*.js"
     ],
     "reporter": [
       "html",
