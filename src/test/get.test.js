@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import get from '../src/get.js';
+import get from '../get.js';
 
 describe('get function', () => {
   

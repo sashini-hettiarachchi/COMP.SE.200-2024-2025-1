@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import filter from '../src/filter.js';
+import filter from '../filter.js';
 
 describe('filter', () => {
   it('should return a new array with elements matching the predicate', () => {

@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import eq from '../src/eq.js';
+import eq from '../eq.js';
 
 describe('eq', () => {
   // Basic equality checks

@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import isDate from '../src/isDate.js';
+import isDate from '../isDate.js';
 
 describe('isDate', () => {
   it('should return true for valid Date objects', () => {

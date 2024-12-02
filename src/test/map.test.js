@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import map from '../src/map.js';
+import map from '../map.js';
 
 describe('map', () => {
   it('should apply the iteratee to each element in the array', () => {

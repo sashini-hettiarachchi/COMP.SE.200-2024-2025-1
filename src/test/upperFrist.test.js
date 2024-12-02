@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import upperFirst from '../src/upperFirst.js';
+import upperFirst from '../upperFirst.js';
 
 describe('upperFirst', () => {
   // Basic scenarios

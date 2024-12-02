@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import isObject from '../src/isObject.js';
+import isObject from '../isObject.js';
 
 describe('isObject', () => {
   it('should return true for objects', () => {

@@ -1,8 +1,4 @@
-
-
-
-import { expect } from 'chai';
-import divide from '../src/divide.js';
+import divide from '../divide.js';
 
 describe('divide', () => {
   // Basic functionality tests

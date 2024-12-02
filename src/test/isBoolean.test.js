@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import isBoolean from '../src/isBoolean.js';
+import isBoolean from '../isBoolean.js';
 
 describe('isBoolean', () => {
   it('should return true for boolean primitives (true)', () => {
