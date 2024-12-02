@@ -6,16 +6,16 @@
   "type": "module",
   "scripts": {
     "test": "mocha",
-    "test-coverage": "nyc mocha"
+    "test-coverage": "nyc --reporter=lcov mocha"
   },
   "nyc": {
-    "reporter": [
-      "text",
-      "html"
-    ],
-    "exclude": [
-      "test/**"
-    ]
+    "nyc": {
+      "reporter": [
+        "lcov",
+        "text"
+      ],
+      "report-dir": "./coverage"
+    }
   },
   "author": "",
   "license": "MIT",
