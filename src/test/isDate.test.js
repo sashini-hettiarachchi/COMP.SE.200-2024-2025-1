@@ -1,43 +1,43 @@
 import isDate from '../isDate.js';
 
 describe('isDate', () => {
-  it('should return true for valid Date objects', () => {
-    expect(isDate(new Date())).to.be.true;
+  test('should return true for valid Date objects', () => {
+    expect(isDate(new Date())).toBe(true);
   });
 
-  it('should return false for invalid Date objects', () => {
-    expect(isDate(new Date('invalid date'))).to.be.false;
+  test('should return false for invalid Date objects', () => {
+    expect(isDate(new Date('invalid date'))).toBe(false);
   });
 
-  it('should return false for date-like strings', () => {
-    expect(isDate('Mon April 23 2012')).to.be.false;
-    expect(isDate('2023-01-01')).to.be.false;
-    expect(isDate('')).to.be.false;
+  test('should return false for date-like strings', () => {
+    expect(isDate('Mon April 23 2012')).toBe(false);
+    expect(isDate('2023-01-01')).toBe(false);
+    expect(isDate('')).toBe(false);
   });
 
-  it('should return false for numbers', () => {
-    expect(isDate(0)).to.be.false;
-    expect(isDate(Date.now())).to.be.false; // Milliseconds since epoch
+  test('should return false for numbers', () => {
+    expect(isDate(0)).toBe(false);
+    expect(isDate(Date.now())).toBe(false); // Milliseconds since epoch
   });
 
-  it('should return false for null and undefined', () => {
-    expect(isDate(null)).to.be.false;
-    expect(isDate(undefined)).to.be.false;
+  test('should return false for null and undefined', () => {
+    expect(isDate(null)).toBe(false);
+    expect(isDate(undefined)).toBe(false);
   });
 
-  it('should return false for non-Date objects', () => {
-    expect(isDate({})).to.be.false; // Plain object
-    expect(isDate([])).to.be.false; // Array
-    expect(isDate({ toString: () => '[object Date]' })).to.be.false; // Mimic Date
+  test('should return false for non-Date objects', () => {
+    expect(isDate({})).toBe(false); // Plain object
+    expect(isDate([])).toBe(false); // Array
+    expect(isDate({ toString: () => '[object Date]' })).toBe(false); // Mimic Date
   });
 
-  it('should return false for functions', () => {
-    expect(isDate(() => new Date())).to.be.false;
-    expect(isDate(function() { return new Date(); })).to.be.false;
+  test('should return false for functions', () => {
+    expect(isDate(() => new Date())).toBe(false);
+    expect(isDate(function () { return new Date(); })).toBe(false);
   });
 
-  it('should return true for custom objects inheriting from Date', () => {
+  test('should return true for custom objects inheriting from Date', () => {
     class CustomDate extends Date {}
-    expect(isDate(new CustomDate())).to.be.true;
+    expect(isDate(new CustomDate())).toBe(true);
   });
 });

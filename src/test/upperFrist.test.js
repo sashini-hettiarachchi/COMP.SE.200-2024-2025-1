@@ -2,76 +2,76 @@ import upperFirst from '../upperFirst.js';
 
 describe('upperFirst', () => {
   // Basic scenarios
-  it('should capitalize the first character of a lowercase word', () => {
-    expect(upperFirst('fred')).to.equal('Fred');
+  test('should capitalize the first character of a lowercase word', () => {
+    expect(upperFirst('fred')).toBe('Fred');
   });
 
-  it('should return the string unchanged if the first character is already uppercase', () => {
-    expect(upperFirst('Fred')).to.equal('Fred');
-    expect(upperFirst('FRED')).to.equal('FRED');
+  test('should return the string unchanged if the first character is already uppercase', () => {
+    expect(upperFirst('Fred')).toBe('Fred');
+    expect(upperFirst('FRED')).toBe('FRED');
   });
 
   // Empty string scenarios
-  it('should return an empty string if the input is an empty string', () => {
-    expect(upperFirst('')).to.equal('');
+  test('should return an empty string if the input is an empty string', () => {
+    expect(upperFirst('')).toBe('');
   });
 
   // Special characters
-  it('should not alter strings starting with non-alphabetic characters', () => {
-    expect(upperFirst('1fred')).to.equal('1fred');
-    expect(upperFirst('!fred')).to.equal('!fred');
-    expect(upperFirst('_fred')).to.equal('_fred');
+  test('should not alter strings starting with non-alphabetic characters', () => {
+    expect(upperFirst('1fred')).toBe('1fred');
+    expect(upperFirst('!fred')).toBe('!fred');
+    expect(upperFirst('_fred')).toBe('_fred');
   });
 
   // Multi-word strings
-  it('should only capitalize the first character of the first word', () => {
-    expect(upperFirst('hello world')).to.equal('Hello world');
-    expect(upperFirst('foo bar baz')).to.equal('Foo bar baz');
+  test('should only capitalize the first character of the first word', () => {
+    expect(upperFirst('hello world')).toBe('Hello world');
+    expect(upperFirst('foo bar baz')).toBe('Foo bar baz');
   });
 
   // Strings with spaces
-  it('should handle strings with leading and trailing spaces correctly', () => {
-    expect(upperFirst('  fred')).to.equal('  Fred');
-    expect(upperFirst('fred  ')).to.equal('Fred  ');
-    expect(upperFirst('  fred  ')).to.equal('  Fred  ');
+  test('should handle strings with leading and trailing spaces correctly', () => {
+    expect(upperFirst('  fred')).toBe('  Fred');
+    expect(upperFirst('fred  ')).toBe('Fred  ');
+    expect(upperFirst('  fred  ')).toBe('  Fred  ');
   });
 
   // Strings with special unicode characters
-  it('should correctly capitalize strings starting with special unicode characters', () => {
-    expect(upperFirst('ßtring')).to.equal('ẞtring'); // German sharp S
-    expect(upperFirst('ñame')).to.equal('Ñame'); // Spanish letter ñ
-    expect(upperFirst('ørlando')).to.equal('Ørlando'); // Scandinavian letter ø
+  test('should correctly capitalize strings starting with special unicode characters', () => {
+    expect(upperFirst('ßtring')).toBe('ẞtring'); // German sharp S
+    expect(upperFirst('ñame')).toBe('Ñame'); // Spanish letter ñ
+    expect(upperFirst('ørlando')).toBe('Ørlando'); // Scandinavian letter ø
   });
 
   // Strings with numeric or non-alphabetic characters
-  it('should handle strings starting with numeric characters correctly', () => {
-    expect(upperFirst('123abc')).to.equal('123abc');
-    expect(upperFirst('!hello')).to.equal('!hello');
+  test('should handle strings starting with numeric characters correctly', () => {
+    expect(upperFirst('123abc')).toBe('123abc');
+    expect(upperFirst('!hello')).toBe('!hello');
   });
 
   // Nullish and undefined inputs
-  it('should handle null and undefined inputs gracefully', () => {
-    expect(upperFirst(null)).to.equal('');
-    expect(upperFirst(undefined)).to.equal('');
+  test('should handle null and undefined inputs gracefully', () => {
+    expect(upperFirst(null)).toBe('');
+    expect(upperFirst(undefined)).toBe('');
   });
 
   // Strings with mixed cases
-  it('should not alter the case of characters after the first character', () => {
-    expect(upperFirst('fRED')).to.equal('FRED');
-    expect(upperFirst('tEsT')).to.equal('TEsT');
+  test('should not alter the case of characters after the first character', () => {
+    expect(upperFirst('fRED')).toBe('FRED');
+    expect(upperFirst('tEsT')).toBe('TEsT');
   });
 
   // Strings with emojis or special symbols
-  it('should correctly handle strings starting with emojis', () => {
-    expect(upperFirst('😀test')).to.equal('😀test');
-    expect(upperFirst('🎉happy')).to.equal('🎉happy');
+  test('should correctly handle strings starting with emojis', () => {
+    expect(upperFirst('😀test')).toBe('😀test');
+    expect(upperFirst('🎉happy')).toBe('🎉happy');
   });
 
   // Input that is not a string
-  it('should return an empty string for non-string inputs', () => {
-    expect(upperFirst(123)).to.equal('');
-    expect(upperFirst(true)).to.equal('');
-    expect(upperFirst({})).to.equal('');
-    expect(upperFirst([])).to.equal('');
+  test('should return an empty string for non-string inputs', () => {
+    expect(upperFirst(123)).toBe('');
+    expect(upperFirst(true)).toBe('');
+    expect(upperFirst({})).toBe('');
+    expect(upperFirst([])).toBe('');
   });
 });
